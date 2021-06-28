@@ -1,0 +1,37 @@
+pygame.SYSTEM_CURSOR_HAND:
+
+When the mouse cursor is visible, it will displayed as a operating system specific variant of the hand cursor
+
+pygame.SYSTEM_CURSOR_ARROW:
+
+When the mouse cursor is visible, it will displayed as a operating system specific variant of the arrow cursor
+
+if pieceValue != 0 and boardSquare.collidepoint(mousePos)
+
+I guess mousePos will have to match calcPosition to select the piece?
+
+gameBoard is made of 8 lists (0 to 7) and has 8 elements in each list (0 to 7)
+
+gameBoard: 
+[[0, (255, 255, 255), 0, (255, 255, 255), 0, (255, 255, 255), 0, (255, 255, 255)],
+
+[(255, 255, 255), 0, (255, 255, 255), 0, (255, 255, 255), 0, (255, 255, 255), 0], 
+
+[0, (255, 255, 255), 0, (255, 255, 255), 0, (255, 255, 255), 0, (255, 255, 255)],
+
+[0, 0, 0, 0, 0, 0, 0, 0], 
+
+[0, 0, 0, 0, 0, 0, 0, 0], 
+
+[(0, 0, 0), 0, (0, 0, 0), 0, (0, 0, 0), 0, (0, 0, 0), 0], 
+
+[0, (0, 0, 0), 0, (0, 0, 0), 0, (0, 0, 0), 0, (0, 0, 0)],
+
+[(0, 0, 0), 0, (0, 0, 0), 0, (0, 0, 0), 0, (0, 0, 0), 0]]
+
+mousePos is stored as a tuple representing the x and y coordinates: (x, y)
+
+If I index the mousePos tuple using [0][1] I should be able to check what these values are between to 
+determine their position on the grid. Once I have done this, I can use an if statement to check what x and y
+are between so that I know which positions to index in the gameBoard list.
+
